@@ -1,7 +1,5 @@
 # Compile the design files
-vlog RTL/module.sv
-vlog RTL/testbench.sv 
-vlog RTL/i2c_pkg.sv
+vlog -timescale 1ns/1ps ../RTL/i2c_pkg.sv ../RTL/module.sv ../RTL/testbench.sv
 
 # Simulate the top-level testbench
 vsim -voptargs="+acc" work.i2c_top_tb
